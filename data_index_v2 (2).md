@@ -224,7 +224,7 @@
 |--------|------------|----------|----------|------------|------------|-----------|-----------------|------------|-------------|-----------------|
 | DS-4.1-4.29 | ofv | YYYY.xlsx  | `ofv\YYY.xlsx` | OFV | 1994–2022 | One row per vehicle (registration/config) | XLSX | Raw | - | information on cars registered in year XXXX, including prices, battery, range and segments (additional to the motor vehicle registry). Contains duplicate values for each license number when the information in the motor vehicle registry is not sufficient to identify the exact brand-model-make of the car. All years share the same structure. |
 
-| DS-4.30 | ofv | cars_full.pq | `ofv\cars_full.pq` | * | * | * | .pq, 253 MB | Intermediate Data | `scripts\driving_analysis_sketchboard.py`, `scripts\driving_analysis.py`, `scripts\load_car_data.py`, `scripts\odometer_load.py` | parquet file with all the yearly files merged. |
+| DS-4.30 | ofv | cars_full.pq | `ofv\cars_full.pq` | * | * | * | .pq, 253 MB | Intermediate Data | `scripts\driving_analysis_sketchboard.py`, `scripts\driving_analysis.py`, `scripts\load_car_data.py`, `scripts\odometer_load.py` | columns: regnr (License plate / Registration number), cartype, segment, body, brand, model, make, makeyear, fuel, battery_type, battery_capacity, co2, fueleff, energyeff, electriceff, range, regdate, price, year, parquet file with all the yearly files merged. |
 
 | DS-4.31 | ofv | LP_All.csv | `ofv\LP_All.csv` | * | * | One row per timestamp × series ID | CSV, 8,126 KB | Raw | `scripts\driving_analysis_sketchboard.py`, `scripts\read_regdata.py` | list prices and additional information by brand-model-make per year. Difficult to merge with either the yearly OFV files or the motor vehicle registry |
 
